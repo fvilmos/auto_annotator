@@ -1,0 +1,26 @@
+{
+    "//1": "SOURCE accepts int values = camera index (integer) or string *.mp4 for local videos. if .jpg or .png is used images are loaded. See ACCEPTED_IMAGE_TYPES",
+    "//2": "if there are many videos to read out, use the FILE_INDEX to select the desired file.",
+    "//3": "if OUT_IMG_SIZE is missing [256,256], by default the original image size will be taken",
+    "//4": "if OUT_RESHAPE is 1 special resize is applied (img max size is taken from w or h), else a simple resize is done - destroys aspect ratio",
+    "//5": "use SEARCH_PATTERN to combine objects to be detected i.e. {'car':'all cars'}. the key is the one that will be saved ",
+    "//6": "use WRITE_TYPE to define how to store the processed data. 0-write data+meta file, 1-just visualize, 2-write just img with overlayed boxes + meta, 3 - img + overlayed img + meta",
+    "//7": "setting a CONFIDENCE_THRESHOLD integer i.e. 0.6 will filter out detections with the right confidence. Setting the value to None, will ignore this setting",
+    "//8": "FORCE_CPU - will force torch to run the model on CPU...for the PCs with no GPU",
+
+    "MODEL_PATH": "weights\\groundingdino_swint_ogc.pth",
+    "CONFIG_PATH": ".\\GroundingDINO\\groundingdino\\config\\GroundingDINO_SwinT_OGC.py",
+    "BASE_PATH":".\\data\\",
+    "SOURCE":0, 
+    "OUT_FILE": "info.meta",
+    "FILE_INDEX":0, 
+    "OUT_IMG_SIZE": [320,240],
+    "OUT_FILE_EXTENSION": ".png",
+    "OUT_RESHAPE": 0,
+    "SEARCH_PATTERN":{"motorbike":"motorbike", "car":"car", "tree":"tree", "trafficlight":"traffic light"},
+    "CONFIDENCE_THRESHOLD": 0.3,
+    "WRITE_TYPE": 3,
+    "ACCEPTED_IMAGE_TYPES": [".jpg",".png"],
+    "FORCE_CPU": 0
+
+}
