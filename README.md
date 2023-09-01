@@ -1,6 +1,6 @@
 ### Auto Annotator
 
-Data Labeling for Machine Learning projects is usually a time-consuming activity. Thanks to GroundingDINO [1] project, this type of activity can be simplified and automated to speed up the process and get the focus on the model development. This project provides bounding box-based data collection, that uses a flexible search parameter to identify/detect the desired objects.
+Data Labeling for Machine Learning projects is usually a time-consuming activity. Thanks to GroundingDINO [1] project (detect anything with language - an open-set detection), this type of activity can be simplified and automated to speed up the process and get the focus on the model development. This project provides bounding box-based data collection, that uses a flexible search parameter to identify/detect the desired objects.
 
 Example: ```"SEARCH_PATTERN":{"motorbike":"motorbike", "car":"car", "tree":"tree", "trafficlight":"traffic light"}```
 
@@ -54,7 +54,7 @@ Each line in the ```info.meta``` is structured in the following way:
   ]}
   ...next lines
 ```
-This means, that on the ```0_40699810207558558786321108528651.png``` image 7 bounding boxes were found,  ```b_bbox``` is list of bounding boxes. The bounding box representation is ```[x1,y1,x2,y2] =[x upper left, y upper left, x right down, y right down]```
+The ```0_40699810207558558786321108528651.png``` image has 7 bounding boxes,  ```b_bbox``` holds this list of bounding boxes. The bounding box representation is ```[x1,y1,x2,y2] =[x upper left, y upper left, x right down, y right down]```
 
 
 ### Resources
