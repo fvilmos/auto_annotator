@@ -17,7 +17,7 @@ Is recommended to use a conda environment for this installation.
 1. conda create --name aanotator python=3.10, activate environment
 2. if you have CUDA installed and want to use the GPU, check "nvidia-smi" for CUDA version (ie. 11.8). Check pytorch versions [2], for the corresponding installation of the components. If the conda variant can't be installed under the conda environment, use the corresponding pip variant.
 3. Clone this project ```git clone https://github.com/fvilmos/auto_annotator```, in the root folder, clone the GroundingDINO project [1].
-4. Navigate into the GroundingDINO directory and follow the installation instructions provided on the projects git page. Download the model weights to the root directory, into the ```./weights``` folder.
+4. Navigate into the GroundingDINO directory and follow the installation instructions provided on the projects git page. Download the model weights to the root directory, into the ```./weights``` folder. Note: if you have the BERT model locally downloaded, navigate to ```GroundingDINO\groundingdino\config\GroundingDINO_SwinT_OGC.py``` and update the ```text_encoder_type = "bert-base-uncased"``` line with absolute path ```text_encoder_type = <path_to_the_bert_weights\\>```.
 5. Configure your data collection strategy in the ```./utils/cfg.json``` file, and you are good to start collecting the data.
 
 ### Configuration
