@@ -28,7 +28,7 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print ("GPU available:", DEVICE)
 
 # prepare model for inference
-model_gd = Model(model_config_path=cfg_data["CONFIG_PATH"], model_checkpoint_path=cfg_data["MODEL_PATH"])
+model_gd = Model(model_config_path=cfg_data["CONFIG_PATH"], model_checkpoint_path=cfg_data["MODEL_PATH"],device=DEVICE)
 
 # create folders to store data
 if cfg_data["WRITE_TYPE"] !=1:
